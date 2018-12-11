@@ -1,4 +1,4 @@
-## How To Manually CRUD K8S object values in Etcd Data Store
+## How To Manually CRUD K8S Object Values In Etcd Data Store
 ### Requirement
    Etcd Data is key value based. It is a core component of Kubernetes which has all critical cluster info stored. As K8S Apiserver is stateless, the data in Etcd becomes paramount. This wiki to address how we can manually check values in Etcd Data store in case we lost our K8S cluster, we may still get some infor from Etcd Refer more details in [Github Etcd Guid](https://github.com/etcd-io/etcd/blob/master/Documentation/dev-guide/interacting_v3.md)
 
