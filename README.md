@@ -46,9 +46,9 @@ ETCDCTL_API=3 /tmp/etcd-download-test/etcdctl version
 ```
  
 ### CRUD actions on Etcd Data
+* export ETCDCTL_API=3   (very important for all etcdctl commands )
 * Create 
 ```
-export ETCDCTL_API=3   (very important)
 cd /tmp/etcd-download-test/
 ./etcdctl --endpoints=127.0.0.1:2379 --cacert=./ca.crt --cert=./peer.crt --key=./peer.key  put henryxie testtest
 OK
