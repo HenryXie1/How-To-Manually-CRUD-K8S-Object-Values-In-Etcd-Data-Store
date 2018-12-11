@@ -3,7 +3,7 @@
    Etcd Data is key value based. It is a core component of Kubernetes which has all critical cluster info stored. As K8S Apiserver is stateless, the data in Etcd becomes paramount. This wiki to address how we can manually check values in Etcd Data store in case we lost our K8S cluster, we may still get some infor from Etcd Refer more details in [Github Etcd Guid](https://github.com/etcd-io/etcd/blob/master/Documentation/dev-guide/interacting_v3.md)
 
 ### Preparation
-* Install etcdctl. As etcdctl is shipped along with etcd.  Please refer official [github etcd release guide](https://github.com/etcd-io/etcd/releases)
+* Install etcdctl. As etcdctl is shipped along with etcd, we would install Etcd on the host.  Please refer official [github etcd release guide](https://github.com/etcd-io/etcd/releases)
 
 ```
 ETCD_VER=v3.3.10
@@ -77,6 +77,7 @@ barrrr
 * Get list of all Keys in Kubernetes cluster,use grep to find your keys. ie to find all keys of livesql
 ```
 ./etcdctl --endpoints=127.0.0.1:2379 --cacert=./ca.crt --cert=./peer.crt --key=./peer.key get / --prefix --keys-only 
+......
 ......
 ./etcdctl --endpoints=127.0.0.1:2379 --cacert=./ca.crt --cert=./peer.crt --key=./peer.key get / --prefix --keys-only |grep livesql
 /registry/deployments/default/livesqlsb-db
